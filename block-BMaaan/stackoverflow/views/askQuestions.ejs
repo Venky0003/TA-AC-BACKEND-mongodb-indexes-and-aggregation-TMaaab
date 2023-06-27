@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+<section class="container">
+    <h2 class="text-center">Ask a Question</h2>
+    <form class="form-q"action="/questions" method="POST">
+        <label for="title">title :</label>
+       <input class="form-control" type="text" name="title"  placeholder="Title of Question">
+       <label for="content">Description :</label>
+       <input class="form-control" type="text" name="content" placeholder="describe your problem">
+       <label for="code">Your Code :</label>
+       <textarea class="form-control-textarea"  name="code" id=""  rows="1" placeholder="your code"></textarea>
+       <label for="result">Your Result :</label>
+       <textarea class="form-control-textarea textarea-result"  name="result" id=""  rows="1" placeholder="your result vs expected result"></textarea>
+       <label for="tags">Tags :</label>
+       <input class="form-control" type="text" name="tags" placeholder="JavaScript or java or Html">
+       <input class="submit-btn" type="submit" value="Submit" />
+    </form>
+</section>
+<%- include('partials/footer') -%>
