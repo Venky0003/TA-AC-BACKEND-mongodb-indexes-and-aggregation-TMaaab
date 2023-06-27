@@ -1,0 +1,88 @@
+<%- include('partials/header') -%>
+<section class="container">
+  <div class="q-box">
+    <h2><%= question.title %></h2>
+    <div class="flex">
+      <div class="text-center">
+        <form action="/questions/<%= question._id %>/upvote" method="POST">
+          <button type="submit" class="button upvote-button">
+            <i class="fa-solid fa-caret-up"></i>
+          </button>
+        </form>
+        <p><%= question.upvotes.length - question.downvotes.length %></p>
+        <form action="/questions/<%= question._id %>/downvote" method="POST">
+          <button type="submit" class="button downvote-button">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </form>
+      </div>
+      <div>
+        <p class="q-content"><%= question.content %></p>
+        <p class="q-code"><%= question.code %></p>
+        <p class="q-text-1 q-result"><%= question.result %></p>
+        <% question.tags.forEach((tag) => { %>
+          <div class="q-text-1 tags"><%= tag %></div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+  <div class="q-box">
+    <h4 class="q-text">Comments</h4>
+    <% question.comments.forEach((comment)=>{ %>
+    <hr />
+    <p class="q-text"><%= comment.content %></p>
+    <hr />
+    <% }) %>
+    <form
+      class="form-comment q-text"
+      action="/questions/<%= question._id %>/comments"
+      method="POST"
+    >
+      <textarea
+        name="content"
+        id=""
+        cols="40"
+        rows="3"
+        placeholder="Your Comments"
+      ></textarea>
+      <input class="btn btn-comment" type="submit" value="Add Comment" />
+    </form>
+  </div>
+  <div class="q-box">
+    <h3 class="q-text">Answers</h3>
+    <% question.answers.forEach((answer)=>{ %>
+    <div class="flex">
+      <div class="text-center">
+        <form action="/answers/<%= answer._id %>/upvoteanswer" method="POST">
+          <button type="submit" class="button upvote-button">
+            <i class="fa-solid fa-caret-up"></i>
+          </button>
+        </form>
+        <p><%= answer.upvotes.length - answer.downvotes.length %></p>
+        <form action="/answers/<%= answer._id %>/downvoteanswer" method="POST">
+          <button type="submit" class="button downvote-button">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </form>
+      </div>
+      <p class="answer"><%= answer.description %></p>
+    </div>
+    <% }) %>
+    <h3 class="q-text">Your Answer</h3>
+    <form
+      class="q-text q-answer"
+      action="/questions/<%= question._id%>/answers"
+      method="POST"
+    >
+      <textarea
+        name="description"
+        id=""
+        cols="90"
+        rows="10"
+        placeholder="Your Answer"
+      ></textarea>
+      <input class="btn btn-comment" type="submit" value="Submit Answer" />
+    </form>
+  </div>
+</section>
+<%- include('partials/footer') -%>

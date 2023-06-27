@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/51a7cc97b5.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container flex justify-between align-center">
+        <a href="/"><h2>StackOverFlow</h2></a>
+        <% if(user) { %>
+        <nav>
+          <a class="links" href=""><%= user.username %></a>
+          <a  class="links" href="/questions/new">Ask Question</a>
+          <a  class="links" href="/questions">Questions</a>
+          <a  class="links" href="/users/logout">Logout</a>
+        </nav>
+        <% } else { %>
+        <nav>
+            <a class="links" href="/users/register">Register</a>
+            <a class="links" href="/users/login">Login</a>
+            <a  class="links" href="/questions">Questions</a>
+        </nav>
+        <% } %>
+      </div>
+    </header>
+

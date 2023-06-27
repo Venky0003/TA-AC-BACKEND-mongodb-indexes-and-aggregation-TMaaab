@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1380px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 26px;
+}
+
+header{
+  padding: 12px  0;
+  background-color: aquamarine;
+}
+
+header a h2{
+  font-size: 1.8rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.links{
+  font-size: 1.2rem;
+  margin-right: 18px;
+}
+
+.form-q{
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.form-control{
+  width: 100%;
+  height: 28px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.form-control-textarea{
+  width: 100%;
+  height:250px; 
+  background-color: rgb(241, 241, 241);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.textarea-result{
+  height: 150px;
+  background-color: white;
+}
+
+.text-center{
+  text-align: center;
+}
+h2{
+  font-size: 1.5rem;
+  /* margin: 1rem; */
+}
+
+label{
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-login{
+  width: 400px;
+  margin:20px auto;
+  border: 1px solid blue;
+  padding: 15px;
+}
+
+.submit-btn{
+  width: 25%;
+  font-size: 17px;
+  background-color: rgb(42, 42, 248);
+  border: none;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.q-box{
+  width: 90%;
+  margin: 15px auto;
+}
+
+.button{
+  /* background-color: #04AA6D; */
+  /* border: none; */
+  /* color: white; */
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.upvote-button{
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.downvote-button{
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.q-content{
+    margin-left: 1rem; 
+}
+.q-text-1{
+  margin-left: 1rem;
+  margin-top: 12px;
+}
+.q-result{
+  white-space: pre-wrap;
+}
+.tags{
+  display: inline-block;
+  padding: 0 12px;
+  background-color: blue;
+  color: white;
+}
+
+.q-text{
+  margin-left: 3rem;
+}
+.q-code{
+  white-space: pre-wrap;
+  background-color: rgb(243, 244, 245);
+  padding: 12px;
+  margin-left: 1rem;
+}
+
+/* .form-comment{
+
+} */
+
+.btn-comment{
+    display: block; 
+}
+
+.q-answer{
+  margin-top: 6px;
+}
+
+.answer{
+  margin-left: 1rem;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+  background-color: rgb(243, 244, 245);
+  padding: 0 15px 15px 15px;
+}
+
+.m-bottom{
+  margin-bottom: 18px;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+h1{
+  font-size: 2.4rem;
+  margin-top: 1.5rem;
+}
