@@ -1,0 +1,9 @@
+<%- include('partials/header') -%>
+<section class="container">
+  <div>
+    <% questions.forEach((question) => { %>
+    <a href="/questions/<%= question.id %>"> <p><%= question.title %></p> </a>
+  </div>
+  <% }) %>
+</section>
+<%- include('partials/footer') -%>
